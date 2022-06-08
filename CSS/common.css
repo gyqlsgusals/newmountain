@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* 초기화 */
+body, h1, h2, h3, p, ul{ margin: 0; padding: 0; }
+ul li { list-style: none; }
+a { text-decoration: none; }
+hr { display: none; } /* 영역도 없이 아에 없애버리기 */
+.hidden { position: absolute; left: -9999px; }
+
+/* 웹폰트 - Noto Sans KR*/
+body { font-family: 'Noto Sans KR', sans-serif;
+			 max-width: 1300px;  min-width: 800px; margin: 0 auto;
+			 padding: 24px 9px 24px;
+			 background: linear-gradient(180deg, #48aec7 0%, #fff 304px) repeat-x; }
+
+/* 메인헤더 */
+#mainHeader { height: 164px;
+						  background: #fff url(../images/bg_header.png) no-repeat right center;
+							border-bottom: 6px solid #030; }
+#mainHeader hgroup { padding: 60px 0 0 36px; }
+#mainHeader hgroup h1 { margin-bottom: 10px; font-size: 28px; }
+#mainHeader hgroup h2 { font-size: 16px; font-weight: normal; }
+
+/* gnb */
+/* <float> 활용
+#gnb { height: 44px; }
+#gnb ul { float: right; }
+#gnb ul li { float: left; margin: 0 15px; line-height: 44px;}
+#gnb ul li a { color: #333; } */
+
+/* <flex> 활용 */
+	#gnb ul { display: flex;
+						justify-content: flex-end;
+						align-items: center;
+						height: 44px; }
+	#gnb ul li { margin: 0 15px; }
+	#gnb ul li a { color: #333; }
+
+	/* 본문 */
+	/* content */
+	#content { padding: 24px 8px;  border: 1px dotted #678f7c;  }
+	#content header { border-bottom: 1px dotted #b2b2b2;
+										padding-bottom: 15px; }
+	#content header h2 { }
+	#content article { }
+	#content article h3 { margin: 26px 0px; }
+	#content article p { }
